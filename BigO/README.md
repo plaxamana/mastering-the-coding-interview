@@ -2,6 +2,8 @@
 
 Or otherwise known as: Asymptotic Notation.
 
+[Big O Cheat Sheet](https://www.bigocheatsheet.com/)
+
 ## What is good code?
 
 It must be:
@@ -117,6 +119,7 @@ When calculating Big O, we can do the following:
 
 - Drop the constants
 - Drop the less significant terms
+- We're usually talking about worst case
 
 Example 1:
 
@@ -156,3 +159,112 @@ function printFirstItemThenFirstHalfThenSayHi100Times(items) {
 
 // This is O(1 + n/2 + 100), which is simply just O(n)
 ```
+
+Example 3:
+
+```js
+function contains(haystack, needle) {
+  // Does the haystack contain the needle?
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] === needle) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+// This is O(n).  The needle could be in the very last of the haystack
+```
+
+# O(n^2) - Quadratic time
+
+Look for nested loops
+
+```js
+const boxes = [1, 2, 3, 4, 5];
+
+function logAllPairs(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    // O(n)
+    for (let j = 0; j < arr.length; j++) {
+      // O(n)
+      console.log([arr[i], arr[j]]);
+    }
+  }
+}
+
+// O(n * n) = O(n^2)
+```
+
+# O(n!) - n factorial
+
+Adding a loop for every element
+
+# 3 Pillars Of Programming
+
+Good code is:
+
+1. Readable
+2. Scalable
+   - Speed
+   - Memory
+
+3 Pillars Of Programming:
+
+1. Readable
+2. Memory (Space Complexity)
+3. Speed (Time Complexity)
+
+# Space Complexity
+
+Sometimes, instead of optimizing for time, we would like to optimize for space. When we talk about "Memory Cost", we are specifying Space Complexity (very similar to how we talk about time complexity). We look at the total size (relative to the size of the input) of any new variables we're allocating.
+
+We can ask ourselves, are we creating any new variables when we run this function?
+
+When talking about space complexity, we are asking ourselves if any **_additional_ space** is being created, excluding the space taken up by the inputs.
+
+![Picture of function creating space](./3.png)
+
+Example 1:
+
+```js
+function sayHiNTimes(n) {
+  for (let i = 0; i < n; i++) {
+    console.log("hi");
+  }
+}
+// O(1) space, fixed number of variables
+```
+
+Example 2:
+
+```js
+function arrayOfHiNTimes(n) {
+  const hiArray = [];
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = "hi";
+  }
+  return hiArray;
+}
+// O(n) space, the hiArray scales for every element in the input array.
+```
+
+Example 3:
+
+```js
+function getLargestItem(items) {
+  let largest = -Number.MAX_VALUE;
+  items.forEach((item) => {
+    if (item > largest) {
+      largest = item;
+    }
+  });
+  return largest;
+}
+// O(1) space, largest variable is only being reassigned if the item happens to be larger.
+```
+
+*Premature optimization can be the root of all evil*
+
+Sometimes, having the code more readable is better in the long run than being clever.  Make your code easily readable first, then try to optimize it.
