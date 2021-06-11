@@ -49,7 +49,7 @@ They want to know you look for answers.
 
 Is a collection of values.  They can have relationships among them and methods that you can use.  Each of their own pros and cons, so its important to know these so you can pick the best one to use for the problem.
 
-![Data Structures Analogy](./DataStructures.png)
+![Data Structures Analogy](./img/DataStructures.png)
 
 Like in the above diagram, each of these storage options have a very specific function.  A backpack is very convenient to carry small items and things to carry around with you.  A drawer is used to store clothes, fridge to store food, etc.
 
@@ -64,6 +64,6 @@ There are always tradeoffs to each data structure.
 Most of these Data Structures are prebuilt, ready for us to use.  However, most importantly, we need to understand the foundations behind them so we can pick the best one to use.
 
 ### How Computers Store Data
-![How Computers Store Data](./HowComputersStoreData.png)
+![How Computers Store Data](./img/HowComputersStoreData.png)
 
-![How Computers Store Data 2](./HowComputersStoreData3.png)
+![How Computers Store Data 2](./img/HowComputersStoreData3.png)
