@@ -43,6 +43,8 @@ They want to know you look for answers.
 
 > Data Structures + Algorithms = Programs
 
+# Introduction to Data Structures
+
 ## What Is A Data Structure?
 
 Is a collection of values.  They can have relationships among them and methods that you can use.  Each of their own pros and cons, so its important to know these so you can pick the best one to use for the problem.
