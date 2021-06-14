@@ -32,12 +32,12 @@ ArrayList<String> cars = new ArrayList<String>();
 
 \* can be O(n) - this is because once the array is filled and a new item needs to be inserted, the old array will need to be copied, and append the new item after the old array has been copied.
 
-In JavaScript, dynamic arrays are implemented into the language.  You don't need to explicitly decalre the size.
+In JavaScript, dynamic arrays are implemented into the language. You don't need to explicitly decalre the size.
 
 ## Pros and Cons of Arrays
 
-| Pros   | Cons |
-| -------- | ----- |
+| Pros          | Cons         |
+| ------------- | ------------ |
 | Fast lookup   | Slow inserts |
-| Fast push/pop |Slow deletes  |
-| Ordered   | Fixed size\*  |
+| Fast push/pop | Slow deletes |
+| Ordered       | Fixed size\* |

@@ -5,7 +5,7 @@ class MyArray {
   }
 
   get(index) {
-    return this.data[index]
+    return this.data[index];
   }
 
   push(item) {
@@ -15,8 +15,8 @@ class MyArray {
   }
 
   pop() {
-    const lastItem = this.data[this.length-1];
-    delete this.data[this.length-1];
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
     this.length--;
     return lastItem;
   }
@@ -27,15 +27,15 @@ class MyArray {
   }
 
   shiftItems(index) {
-    for(let i=index; i < this.length-1; i++) {
-      this.data[i] = this.data[i+1]
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
     }
-    delete this.data[this.length-1]
+    delete this.data[this.length - 1];
     this.length--;
   }
 }
 
 const newArray = new MyArray();
-newArray.push('dog')
-newArray.push('cat')
+newArray.push("dog");
+newArray.push("cat");
 console.log(newArray);

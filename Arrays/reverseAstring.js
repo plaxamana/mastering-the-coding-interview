@@ -1,16 +1,16 @@
 function reverseString(str) {
-  return str.split("").reverse().join("")
+  return str.split("").reverse().join("");
 }
 
 function reverseString2(str) {
   let reversed = "";
-  for(let i=str.length-1; i >= 0; i--) {
-    reversed += str.charAt(i)
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str.charAt(i);
   }
-  return reversed
+  return reversed;
 }
 
-const reversed = reverseString2("hello world")
-const reversed2 = reverseString2('animal')
-console.log('reverseString',reversed)
-console.log('reverseString2',reversed2)
+const reversed = reverseString2("hello world");
+const reversed2 = reverseString2("animal");
+console.log("reverseString", reversed);
+console.log("reverseString2", reversed2);

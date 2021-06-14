@@ -11,19 +11,19 @@ function twoSum(array, target) {
   let k = array.length - 1;
 
   while (j < k) {
-    if(array[j] + array[k] === target) {
-        return [j, k];
+    if (array[j] + array[k] === target) {
+      return [j, k];
     }
-    
-    if(array[j] + array[k] < target) {
-        j++;
+
+    if (array[j] + array[k] < target) {
+      j++;
     } else {
-        k--;
+      k--;
     }
   }
 
-  return [-1]
+  return [-1];
 }
 
-const answer = twoSum([2,4,6,8], 20)
-console.log(answer)
+const answer = twoSum([2, 4, 6, 8], 20);
+console.log(answer);
