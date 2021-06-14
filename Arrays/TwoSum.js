@@ -25,5 +25,5 @@ function twoSum(array, target) {
   return [-1];
 }
 
-const answer = twoSum([2, 4, 6, 8], 20);
+const answer = twoSum([2, 4, 6, 8], 12);
 console.log(answer);
