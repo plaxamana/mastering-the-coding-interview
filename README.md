@@ -67,3 +67,8 @@ Most of these Data Structures are prebuilt, ready for us to use.  However, most 
 ![How Computers Store Data](./img/HowComputersStoreData.png)
 
 ![How Computers Store Data 2](./img/HowComputersStoreData3.png)
+
+![How Computers Store Data 4](./img/HowComputersStoreData4.png)
+
+![Operations on Data Structures](./img/OperationsOnDS.png)
+
