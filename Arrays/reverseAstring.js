@@ -10,7 +10,7 @@ function reverseString2(str) {
   return reversed
 }
 
-const reversed = reverseString('hello world')
+const reversed = reverseString2("hello world")
 const reversed2 = reverseString2('animal')
 console.log('reverseString',reversed)
 console.log('reverseString2',reversed2)
