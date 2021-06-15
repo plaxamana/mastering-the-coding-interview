@@ -54,8 +54,16 @@ Both queues and stacks can be implemented using arrays, but implementing a queue
 
 // grocery checkout
 
-Mary <- Joe <- Bob //(end of line)
+Mary < -Joe < -Bob; //(end of line)
 
 // LinkedList implementation would be better since you can remove/insert at head or remove/insert at tail.
 // LinkedLists don't need resizing, and can avoid shifting the indexes if using array
 ```
+
+## Pros and Cons of Stacks & Queues
+
+| Pros            | Cons        |
+| --------------- | ----------- |
+| Fast Operations | Slow lookup |
+| Fast Peek       |             |
+| Ordered         |             |
