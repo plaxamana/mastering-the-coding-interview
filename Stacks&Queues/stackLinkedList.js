@@ -13,13 +13,13 @@ class Stack {
   }
 
   peek() {
-    if(this.isEmpty()) return 'stack is empty';
+    if (this.isEmpty()) return "stack is empty";
     return this.top;
   }
 
   pop() {
-    if(this.isEmpty()) return this.length;
-    if(!this.top.next) {
+    if (this.isEmpty()) return this.length;
+    if (!this.top.next) {
       this.top = null;
       this.length = 0;
       return this;
@@ -30,8 +30,8 @@ class Stack {
   }
 
   push(value) {
-    let newNode = new Node(value)
-    if(this.isEmpty()) {
+    let newNode = new Node(value);
+    if (this.isEmpty()) {
       this.top = newNode;
       this.bottom = newNode;
     } else {
@@ -43,7 +43,7 @@ class Stack {
   }
 
   isEmpty() {
-    return this.length === 0
+    return this.length === 0;
   }
 
   printStack() {
@@ -58,15 +58,12 @@ class Stack {
 }
 
 const myStack = new Stack();
-myStack.push(10)
-myStack.push(20)
-myStack.push(30)
-myStack.push(44)
-myStack.push(11)
-myStack.push(191)
-myStack.pop()
-myStack.pop()
-myStack.pop()
-myStack.pop()
+myStack.push("google");
+myStack.push("udemy");
+myStack.push("betterdev");
+myStack.push("discord");
 myStack.printStack();
-console.log('top: ',myStack.peek());
+myStack.pop();
+myStack.pop();
+myStack.printStack();
+console.log("top: ", myStack.peek());
