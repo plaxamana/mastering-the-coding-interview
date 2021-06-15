@@ -22,7 +22,7 @@ function twoSum(array, target) {
     }
   }
 
-  return [-1];
+  throw new Error('No match found');
 }
 
 // for the unsorted array - using the map object
@@ -58,9 +58,7 @@ function twoSum3(array, target) {
   }
 }
 
-const answer = twoSum([2, 4, 6, 8], 10);
 const answer2 = twoSum2([2, 4, 6, 8], 10);
 const answer3 = twoSum3([2, 4, 6, 8], 10);
-console.log(answer);
 console.log(answer2);
 console.log(answer3);
