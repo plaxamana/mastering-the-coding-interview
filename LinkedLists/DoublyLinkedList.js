@@ -9,20 +9,22 @@ class Node {
 // TODO: finish implementing the doubly linked list methods
 
 class DoublyLinkedList {
-  constructor(value) {
-    this.head = {
-      value,
-      next: null,
-      prev: null,
-    };
-    this.tail = this.head;
-    this.length = 1;
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+
+  isListEmpty() {
+    return !this.head;
   }
 
   append(value) {
     const newNode = new Node(value);
-    if (this.length === 1) {
-      newNode.prev = this.head;
+    if (this.isListEmpty()) {
+      this.head = newNode;
+      this.tail = newNode;
+      return this;
     }
     this.tail.next = newNode;
     newNode.prev = this.tail;
@@ -33,9 +35,15 @@ class DoublyLinkedList {
 
   prepend(value) {
     const newNode = new Node(value);
+    if (this.isListEmpty()) {
+      this.head = newNode;
+      this.tail = newNode;
+      return this;
+    }
     this.head.prev = newNode;
     newNode.next = this.head;
     this.head = newNode;
+    this.head.prev = null;
     this.length++;
     return this;
   }
@@ -67,6 +75,8 @@ class DoublyLinkedList {
       const newNode = new Node(value);
       let current = this.traverseToIndex(index - 1);
       newNode.next = current.next;
+      current.next.prev = newNode;
+      newNode.prev = current;
       current.next = newNode;
     }
     this.length++;
@@ -85,6 +95,7 @@ class DoublyLinkedList {
   remove(index) {
     if (index < 0) {
       this.head = this.head.next;
+      this.head.prev = null;
       this.length--;
     } else if (index >= this.length) {
       let current = this.traverseToIndex(this.length - 2);
@@ -104,9 +115,11 @@ class DoublyLinkedList {
   }
 }
 
-const myLinkedList = new DoublyLinkedList(10);
+const myLinkedList = new DoublyLinkedList();
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(50);
-console.log(myLinkedList.printList());
+myLinkedList.insert(1, 100);
+console.log('Printing List: \n----------');
 myLinkedList.printListPointers();
+console.log(myLinkedList.printList());
