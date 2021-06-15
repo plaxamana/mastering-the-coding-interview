@@ -2,14 +2,18 @@ class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
+    this.prev = null;
   }
 }
 
-class LinkedList {
+// TODO: finish implementing the doubly linked list methods
+
+class DoublyLinkedList {
   constructor(value) {
     this.head = {
       value,
       next: null,
+      prev: null,
     };
     this.tail = this.head;
     this.length = 1;
@@ -17,7 +21,11 @@ class LinkedList {
 
   append(value) {
     const newNode = new Node(value);
+    if (this.length === 1) {
+      newNode.prev = this.head;
+    }
     this.tail.next = newNode;
+    newNode.prev = this.tail;
     this.tail = newNode;
     this.length++;
     return this;
@@ -25,6 +33,7 @@ class LinkedList {
 
   prepend(value) {
     const newNode = new Node(value);
+    this.head.prev = newNode;
     newNode.next = this.head;
     this.head = newNode;
     this.length++;
@@ -39,6 +48,14 @@ class LinkedList {
       current = current.next;
     }
     return list;
+  }
+
+  printListPointers() {
+    let current = this.head;
+    while (current !== null) {
+      console.log(current);
+      current = current.next;
+    }
   }
 
   insert(index, value) {
@@ -76,6 +93,7 @@ class LinkedList {
       this.length--;
     } else {
       let current = this.traverseToIndex(index - 1);
+      current.next.next.prev = current;
       current.next = current.next.next;
       this.length--;
     }
@@ -86,19 +104,9 @@ class LinkedList {
   }
 }
 
-const myLinkedList = new LinkedList(10);
+const myLinkedList = new DoublyLinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);
-myLinkedList.prepend(40);
-myLinkedList.prepend(220);
-myLinkedList.prepend(69);
-myLinkedList.insert(0, 23);
-myLinkedList.insert(99, 100);
-console.log("before insert:", myLinkedList.printList());
-console.log("LinkedList size:", myLinkedList.getSize());
-myLinkedList.insert(1, 500);
-console.log("after insert:", myLinkedList.printList());
-console.log("LinkedList size:", myLinkedList.getSize());
-myLinkedList.remove(3)
-console.log("after remove:", myLinkedList.printList());
-console.log("LinkedList size:", myLinkedList.getSize());
+myLinkedList.prepend(50);
+console.log(myLinkedList.printList());
+myLinkedList.printListPointers();

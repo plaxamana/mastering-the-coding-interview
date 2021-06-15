@@ -84,21 +84,30 @@ class LinkedList {
   getSize() {
     return this.length;
   }
+
+  reverse() {
+    if(!this.head.next) {
+      return this.printList()
+    }
+    let prev = null;
+    let current = this.head;
+    let next = null;
+    while (current !== null) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    this.head = prev;
+    return this.printList()
+  }
 }
 
-const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.append(16);
-myLinkedList.prepend(40);
-myLinkedList.prepend(220);
-myLinkedList.prepend(69);
-myLinkedList.insert(0, 23);
-myLinkedList.insert(99, 100);
-console.log("before insert:", myLinkedList.printList());
-console.log("LinkedList size:", myLinkedList.getSize());
-myLinkedList.insert(1, 500);
-console.log("after insert:", myLinkedList.printList());
-console.log("LinkedList size:", myLinkedList.getSize());
-myLinkedList.remove(3)
-console.log("after remove:", myLinkedList.printList());
-console.log("LinkedList size:", myLinkedList.getSize());
+// original: [10,2,4,5]
+// reversed: [5,4,2,10]
+const myList = new LinkedList(10);
+myList.append(2)
+myList.append(4)
+myList.append(5)
+console.log(myList.reverse());
+console.log(myList);

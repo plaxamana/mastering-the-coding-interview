@@ -33,4 +33,32 @@ Linked Lists have a more loose structure. You can insert data in the middle of t
 | insert  | O(n)  |
 | delete  | O(n)  |
 
-What's a pointer?  It's a reference to an object in memory.  This would be pass by reference (since it's not creating a copy).
+What's a pointer? It's a reference to an object in memory. This would be pass by reference (since it's not creating a copy).
+
+## Doubly Linked Lists
+
+![Doubly Linked Lists](./DoublyLinkedLists.png)
+
+A doubly linked list has an extra pointer pointing to its previous node.
+
+| Method  | Big O |
+| ------- | ----- |
+| prepend | O(1)  |
+| append  | O(1)  |
+| lookup  | O(n)  |
+| insert  | O(n)  |
+| delete  | O(n)  |
+
+## Linked List Pros & Cons
+
+| Pros           | Cons        |
+| -------------- | ----------- |
+| Fast Insertion | Slow lookup |
+| Fast Deletion  | More memory |
+| Ordered        |             |
+| Flexible Size  |             |
+| delete         |             |
+
+With this newfound knowledge, we can implement a Linked List to manage collisions
+
+![Managing Collisions](../HashTables/collision.png)
