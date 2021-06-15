@@ -37,3 +37,13 @@ Arrays
 | push\* | O(1)  |
 | insert | O(n)  |
 | delete | O(n)  |
+
+## Pros and Cons of Hash Tables
+
+| Pros           | Cons               |
+| -------------- | ------------------ |
+| Fast Lookups\* | Unordered          |
+| Fast Inserts   | Slow key iteration |
+| Flexible keys  |                    |
+
+\* Good collision resolution needed

@@ -25,5 +25,42 @@ function twoSum(array, target) {
   return [-1];
 }
 
-const answer = twoSum([2, 4, 6, 8], 12);
+// for the unsorted array - using the map object
+function twoSum2(array, target) {
+  let map = new Map();
+
+  for (let i = 0; i < array.length; i++) {
+    let complement = target - array[i];
+
+    // check if our map has a complement
+    if (map.has(complement)) {
+      // return the map key, and current index
+      return [map.get(complement), i];
+    }
+    // add the current number as key, and index as value
+    map.set(array[i], i);
+  }
+}
+
+// also for unsorted array - using object
+function twoSum3(array, target) {
+  // initialize our empty map
+  let map = {};
+
+  // iterate through the array
+  for (let i = 0; i < array.length; i++) {
+    // find the complement target number by subtracting target - current number
+    let complement = target - array[i];
+    // if the current number exists in our map, return the index of the map, and current index
+    if (map[array[i]] !== undefined) return [map[array[i]], i];
+    // if no match was found earlier, store the complement number as a key and the index as the value
+    map[complement] = i;
+  }
+}
+
+const answer = twoSum([2, 4, 6, 8], 10);
+const answer2 = twoSum2([2, 4, 6, 8], 10);
+const answer3 = twoSum3([2, 4, 6, 8], 10);
 console.log(answer);
+console.log(answer2);
+console.log(answer3);
