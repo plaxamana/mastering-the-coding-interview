@@ -107,3 +107,52 @@ Time and space complexity of the sort cannot be guaranteed as it depends on the 
 [Sorting Algorithms Visualization](https://www.toptal.com/developers/sorting-algorithms)
 
 [Youtube - Dancing Algorithms](https://www.youtube.com/user/AlgoRythmics/videos)
+
+## Which Sort Should We Use?
+
+| Sorting Algorithm | When to use                                 |
+| ----------------- | ------------------------------------------- |
+| Insertion Sort    | Input is small/items are mostly sorted      |
+| Bubble Sort       | Almost never. Just used for teaching mostly |
+| Selection Sort    | Almost never. Just used for teaching mostly |
+| Merge Sort        | Time: O(n log n) :: Space: O(n)             |
+| Quick Sort        | Time: O(n log n) :: Space: O(log n)         |
+
+---
+
+Can we beat O(n log n)? The non-comparison sorts can.
+
+| Comparison Sort | Non-Comparison Sort |
+| --------------- | ------------------- |
+| Insertion Sort  | Radix Sort          |
+| Bubble Sort     | Counting Sort       |
+| Selection Sort  |                     |
+| Merge Sort      |                     |
+| Quick Sort      |                     |
+
+---
+Sorting Questions
+
+#1 - Sort 10 schools around your house by distance:
+- insertion sort
+
+#2 - eBay sorts listings by the current Bid amount:
+- radix or counting sort
+
+#3 - Sport scores on ESPN
+- quick sort (worried about memory)
+
+#4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+- merge sort
+
+#5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+- insertion sort
+
+#6 - Temperature Records for the past 50 years in Canada
+- quick sort
+
+#7 - Large user name database needs to be sorted. Data is very random.
+- merge sort (if memory isn't an issue)
+
+#8 - You want to teach sorting for the first time
+- bubble sort, selection sort
