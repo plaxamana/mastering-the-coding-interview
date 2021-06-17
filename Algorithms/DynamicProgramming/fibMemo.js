@@ -38,6 +38,6 @@ function fibonacciMaster2(n) {
 const fasterFib = fibonacciMaster();
 
 // console.log("Slow", fibonacci(30));
-console.log("DP", fasterFib(30));
+console.log("DP", fasterFib(11));
 // console.log("DP2", fibonacciMaster2(100));
 // console.log("we did " + calculations + " calculations");
