@@ -31,7 +31,8 @@ Left to Right, level by level. Uses additional memory to track the nodes and its
 //       9
 //    6     12
 //  1  4  34  45
-BFS[(9, 6, 12, 1, 4, 34, 45)];
+
+// BFS[9, 6, 12, 1, 4, 34, 45];
 ```
 
 ### Depth First Search
@@ -44,7 +45,8 @@ Follows one branch of the tree and goes deep. If no match is found, then it will
 //       9
 //    6     12
 //  1  4  34  45
-DFS[(9, 6, 1, 4, 12, 34, 45)];
+
+// DFS[9, 6, 1, 4, 12, 34, 45];
 ```
 
 ### Pros and Cons of BFS/DFS
@@ -96,3 +98,52 @@ Determining whether a path exists between two nodes:
 Finding the shortest path:
 
 - BFS
+
+### InOrder, PreOrder and PostOrder
+
+```js
+// InOrder Traversal
+
+//       9
+//    6     12
+//  1  4  34  45
+
+// InOrder - [1,5,4,9,34,12,45];
+```
+
+```js
+// PreOrder Traversal - useful for recreating the binary tree
+
+//       9
+//    6     12
+//  1  4  34  45
+
+// PreOrder - [9, 6, 1, 4, 12, 34, 45];
+```
+
+```js
+// PostOrder Traversal - children come before the parent
+
+//       9
+//    6     12
+//  1  4  34  45
+
+// PostOrder - [1, 4, 6, 34, 45, 12, 9];
+```
+
+## Graph Traversals
+
+They also use BFS and DFS.
+- DFS is really good for finding if a path exists
+- BFS is really good for finding the shortest path
+
+There are two more searching algorithms for graphs:
+- Bellman-Ford
+  - Very effective at finding the shortest path, usually for negative weights
+  - Can take a long time run, not efficient O(n^2)
+- Dijkstra
+  - Can't account for negative weights between nodes
+  - But can run a bit better than Bellman-Ford algorithm
+
+These algorithms are used to find the shortest path possible on a weighted graph.
+
