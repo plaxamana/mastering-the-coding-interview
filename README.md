@@ -6,7 +6,32 @@ Feel free to use this repo if you wish by cloning it.  Also contact me if there 
 
 ## Table of Contents
 
-[Big O](./BigO)
+**Asymptotic Analysis**
+- [Big O](./BigO)
+
+**Data Structures**
+- [Arrays](./Arrays)
+- [Hash Tables](./HashTables)
+- [Linked Lists](./LinkedLists)
+- [Stacks & Queues](./Stacks&Queues)
+- [Trees](./Trees)
+- [Graphs](./Graphs)
+
+**Algorithms**
+- [Algorithms](./Algorithms)
+    - [Recursion Example: Fibonacci](./Algorithms/fibonacci.js)
+    - [Recursion Example: Factorial](./Algorithms/factorial.js)
+- Searching Algorithms
+    - [Linear Search](./Algorithms/Searching/linearsearch.js)
+    - [Binary Search](./Algorithms/Searching/binarysearch.js)
+    - [Breadth First Search & Depth First Search](./Algorithms/Searching/BFS_DFS.js)
+- Sorting
+    - [Bubble Sort](./Algorithms/bubblesort.js)
+    - [Selection Sort](./Algorithms/selectionsort.js)
+    - [Insertion Sort](./Algorithms/insertionsort.js)
+    - [Merge Sort](./Algorithms/mergesort.js)
+    - [Quick Sort](./Algorithms/quicksort.js)
+
 
 # How To Solve Coding Problems
 
